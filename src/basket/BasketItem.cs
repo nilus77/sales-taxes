@@ -16,8 +16,7 @@ namespace sales_taxes.basket
         
         public Price CalculatePrice()
         {
-            var taxes = Product.BasicSalesTax + Product.AdditionalSalesTax;
-            return Product.Price * Quantity + taxes;
+            return Product.Price * Quantity + (Product.BasicSalesTax + Product.AdditionalSalesTax);
         }
 
         public Price CalculateSalesTax()
